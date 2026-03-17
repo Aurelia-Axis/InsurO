@@ -1,4 +1,9 @@
+<img src="GigShield delivery p.png" width="100%">
 # GigShield - AI Powered Parametric Insurance for Gig Delivery Workers
+
+### Protecting Gig Workers From Income Disruptions using an AI-enabled parametric insurance platform 
+
+
 
 GigShield is an AI-driven parametric insurance platform designed to protect delivery partners from income loss caused by external disruptions.
 
