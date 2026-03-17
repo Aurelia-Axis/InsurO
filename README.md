@@ -2,9 +2,9 @@
   <img src="GigShield delivery p.png" width="60%">
 </p>
 
-<h3 align="center">
+<h1 align="center">
 <b> GigShield - AI Powered Insurance for Delivery Partners </b>
-</h3>
+</h1>
 
 <p align="center">
 <i> "Where Disruption Meets Protection, and Hustle Never Breaks" </i>
