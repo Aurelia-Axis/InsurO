@@ -2,9 +2,13 @@
   <img src="GigShield delivery p.png" width="60%">
 </p>
 
-# GigShield - AI Powered Insurance for Delivery Partners
+<h3 align="center">
+<b> GigShield - AI Powered Insurance for Delivery Partners </b>
+</h3>
 
-##         "Where Disruption Meets Protection, and Hustle Never Breaks"
+<p align="center">
+<i> "Where Disruption Meets Protection, and Hustle Never Breaks" </i>
+</p>
 
 GigShield is an AI-driven parametric insurance platform designed to protect delivery partners from income loss caused by external disruptions such as Traffic congestion, Algorithm changes, Weather or external issues etc.
 
