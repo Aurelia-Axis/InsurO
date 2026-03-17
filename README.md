@@ -1,16 +1,16 @@
 <p align="center">
-  <img src="GigShield delivery p.png" width="60%">
+  <img src="InsurO.png" width="60%">
 </p>
 
 <h1 align="center">
-<b> GigShield - AI Powered Insurance for Delivery Partners </b>
+<b> InsurO - AI Powered Insurance for Delivery Partners </b>
 </h1>
 
 <p align="center">
 <i> <b>  "Where Disruption Meets Protection, and Hustle Never Breaks" </b> </i>
 </p>
 
-GigShield is an AI-driven parametric insurance platform designed to protect delivery partners from income loss caused by external disruptions such as Traffic congestion, Algorithm changes, Weather or external issues etc.
+InsurO is an AI-driven parametric insurance platform designed to protect delivery partners from income loss caused by external disruptions such as Traffic congestion, Algorithm changes, Weather or external issues etc.
 
 
 ## Problem Statement 
@@ -26,13 +26,13 @@ Currently, gig workers have no financial protection against these uncontrollable
 
 ## Solution
 We will builda an AI-powered parametric insurance system that automatically detects disruptions, compensates workers for lost income.
-Instead of traditional claim-based insurance, GigShield uses real-time data monitoring and AI-driven triggers to automatically detect disruptions and compensate workers for lost income.
+Instead of traditional claim-based insurance, InsurO uses real-time data monitoring and AI-driven triggers to automatically detect disruptions and compensate workers for lost income.
 
 The platform also acts as an earnings intelligence system, helping workers identify high-demand zones and reduce income loss before it happens.
 
 
 ## Core System Concepts
-GigShield operates on three main pillars:
+InsurO operates on three main pillars:
 
 1️. Income Protection with Parametric Automation:- Automatically compensates workers when disruptions reduce their delivery earnings.
 
