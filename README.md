@@ -1,4 +1,4 @@
-<img src="GigShield delivery p.png" width="50%">
+![Project Banner](GigShield delivery p.png)
 # GigShield - AI Powered Parametric Insurance for Gig Delivery Workers
 
 ### Protecting Gig Workers From Income Disruptions using an AI-enabled parametric insurance platform 
