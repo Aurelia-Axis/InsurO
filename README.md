@@ -4,13 +4,10 @@
 
 # GigShield - AI Powered Parametric Insurance for Gig Delivery Workers
 
-### Protecting Gig Workers From Income Disruptions using an AI-enabled parametric insurance platform 
+## Protecting Gig Workers From Income Disruptions using an AI-enabled parametric insurance platform 
 
+GigShield is an AI-driven parametric insurance platform designed to protect delivery partners from income loss caused by external disruptions such as Traffic congestion, Algorithm changes, Weather or external issues etc.
 
-
-GigShield is an AI-driven parametric insurance platform designed to protect delivery partners from income loss caused by external disruptions.
-
-Theme: "Ideate & Know Your Delivery Worker"
 
 ## Problem Statement 
 
