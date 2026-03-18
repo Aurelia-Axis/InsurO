@@ -20,6 +20,7 @@ India’s gig delivery workers depend on daily earnings from platforms like Swig
 * Traffic congestion
 * Restaurant preparation delays
 * Weather disruption 
+
 can significantly reduce their working hours and cause them to lose 20–30% of their monthly income.
 Currently, gig workers have no financial protection against these uncontrollable disruptions.
 
