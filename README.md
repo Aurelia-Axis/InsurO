@@ -34,14 +34,24 @@ The platform also acts as an earnings intelligence system, helping workers ident
 ## Core System Concepts
 InsurO operates on three main pillars:
 
-1️. Income Protection with Parametric Automation:- Automatically compensates workers when disruptions reduce their delivery earnings.
+<table>
+<tr><td>1️. </td><td><code>Income Protection with Parametric Automation</code></td><td>Automatically compensates workers when disruptions reduce their delivery earnings</td></tr>
+  
+<tr><td>2️. </td><td><code>Smart Earnings Intelligence</code></td><td> Uses AI to predict risks and recommend better zones, restaurants or routes for maximizing income</td></tr>
 
-2️. Smart Earnings Intelligence:- Uses AI to predict risks and recommend better zones, restaurants or routes for maximizing income.
-
-3️. Transparent & Fraud-Resistant Insurance:- Ensures payouts are data-driven and verified using intelligent fraud detection mechanisms.
+<tr><td>3️. </td><td><code> Transparent & Fraud-Resistant Insurance</code></td><td>Ensures payouts are data-driven and verified using intelligent fraud detection mechanisms</td></tr>
 
 
-## Disruptions Covered
+
+## Disruptions Covered 
+I. Platform Algorithm Disruption: Delivery platforms frequently update their order allocation algorithms, which can suddenly reduce order distribution to certain workers.
+   These algorithms continuously change based on:
+    •	demand-supply ratio
+    •	delivery time optimization
+    •	worker ratings
+    •	acceptance rate
+    •	zone prioritization
+
 
 
 
