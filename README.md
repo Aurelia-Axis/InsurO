@@ -45,12 +45,12 @@ InsurO operates on three main pillars:
 
 ## Disruptions Covered 
 I. Platform Algorithm Disruption: Delivery platforms frequently update their order allocation algorithms, which can suddenly reduce      order distribution to certain workers.
-   These algorithms continuously change based on:
-    - demand-supply ratio
-    - delivery time optimization
-    - worker ratings
-    - acceptance rate
-    - zone prioritization
+These algorithms continuously change based on:
+- demand-supply ratio
+- delivery time optimization
+- worker ratings
+- acceptance rate
+- zone prioritization
 
 
 
