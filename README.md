@@ -53,6 +53,21 @@ These algorithms continuously change based on:
 - acceptance rate
 - zone prioritization
 
+```bash
+    1. Track worker performance (orders/hour, earnings, idle time)
+    2. Compare current data with historical average
+    3. Detect sudden drop:
+       <code>drop % = (historical_avg - current_value) / historical_avg</code>
+    4. If drop_percentage > threshold (e.g., >30%) → **possible disruption**
+    5. Validate:
+       - No weather/traffic issues
+       - Zone demand is normal
+    6. Calculate income loss:
+       loss = expected_earnings - actual_earnings
+    7. Run fraud checks (activity logs, GPS)
+    8. If valid → Auto-trigger claim & payout
+```
+
 Example scenario:                                              
 |       Metric         |   Value  |
 |----------------------|----------|
@@ -60,16 +75,15 @@ Example scenario:
 | Orders After Change  |    3     |
 | Drop percentage      |    75%   |
 | Threshold            |    70%   |
-| Status               |  Flagged |
+| Status               |🚩Flagged |
 
-- <code>drop_percentage = (historical_avg - current_value) / historical_avg </code>
-- <code>drop_percenatge > threshold (e.g., 70%)</code> -> flag as **Potential Disruption**
 2. **Weather Disruption:** Extreme weather conditions can reduce delivery activity or make travel unsafe.
   Examples include:
   - Heavy rainfall
   - Extreme heat
   - High AQI
   - Storm conditions
+  
   Detection Logic
 ```bash
    1. Fetch real-time weather data (rainfall, alerts, etc.)
@@ -83,7 +97,15 @@ Example scenario:
    5. Apply payout policy (e.g., 80% of loss)
    6. Run fraud checks (GPS, activity, duplicates)
 ```
-
+Example scenario:
+| Metric              | Value |
+|--------------------|-------|
+| Rainfall           | 130 mm |
+| Work Hours Lost    | 3 hrs  |
+| Estimated Loss     | ₹300   |
+| Coverage           | 80%    |
+| Final Payout       | ₹240   |
+| Status             | ✅Paid |
 
 
 
