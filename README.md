@@ -16,10 +16,10 @@ InsurO is an AI-driven parametric insurance platform designed to protect deliver
 ## Problem Statement 
 
 India’s gig delivery workers depend on daily earnings from platforms like Swiggy, Zomato, and Blinkit. However, external uncontrollable disruptions such as:
-• Platform algorithm changes
-• Traffic congestion
-• Restaurant preparation delays
-• Weather disruption 
+* Platform algorithm changes
+* Traffic congestion
+* Restaurant preparation delays
+* Weather disruption 
 can significantly reduce their working hours and cause them to lose 20–30% of their monthly income.
 Currently, gig workers have no financial protection against these uncontrollable disruptions.
 
@@ -46,14 +46,20 @@ InsurO operates on three main pillars:
 ## Disruptions Covered 
 I. Platform Algorithm Disruption: Delivery platforms frequently update their order allocation algorithms, which can suddenly reduce      order distribution to certain workers.
    These algorithms continuously change based on:
-    -demand-supply ratio
-    -delivery time optimization
-    -worker ratings
-    -acceptance rate
-    -zone prioritization
+    - demand-supply ratio
+    - delivery time optimization
+    - worker ratings
+    - acceptance rate
+    - zone prioritization
 
 
 
+# Workflow We will use this
+## Tasks
+- [x] User authentication
+- [x] Fraud detection module
+- [ ] Payment integration
+- [ ] Deployment
 
 
 
