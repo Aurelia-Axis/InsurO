@@ -165,7 +165,7 @@ Example Scenario :
        - Duplicate claim check
     7. If valid → Auto-trigger claim & payout
    ```
-   Example scenario :
+Example scenario :
 | Metric                    | Value |
 |---------------------------|-------|
 | Avg Prep Time             | 10 min |
