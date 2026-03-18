@@ -40,7 +40,7 @@ InsurO operates on three main pillars:
 <tr><td>2️. </td><td><code>Smart Earnings Intelligence</code></td><td> Uses AI to predict risks and recommend better zones, restaurants or routes for maximizing income</td></tr>
 
 <tr><td>3️. </td><td><code> Transparent & Fraud-Resistant Insurance</code></td><td>Ensures payouts are data-driven and verified using intelligent fraud detection mechanisms</td></tr>
-
+</table>
 
 
 ## Disruptions Covered 
