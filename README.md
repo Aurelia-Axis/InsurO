@@ -82,7 +82,7 @@ This prevents fraud and ensures payouts are genuinely warranted.
 │     with Automation          when disruption confirmed     │
 ├────────────────────────────────────────────────────────────┤
 │  2. Smart Earnings           AI predicts risks, suggests   │
-│     Intelligence             better zones & routes        │
+│     Intelligence             better zones & routes         │
 ├────────────────────────────────────────────────────────────┤
 │  3. Transparent &            Data-verified payouts with    │
 │     Fraud-Resistant          multi-layer fraud detection   │
@@ -330,9 +330,9 @@ Every payout goes through a multi-layer fraud check:
 └──────┬──────┘   └───────┬────────┘
        │                  │
 ┌──────▼──────────────────▼─────────┐
-│       Database Layer               │
-│  PostgreSQL (structured data)      │
-│  MongoDB (logs + activity)         │
+│       Database Layer              │
+│  PostgreSQL (structured data)     │
+│  MongoDB (logs + activity)        │
 └────────────────┬──────────────────┘
                  │
 ┌────────────────▼──────────────────┐
