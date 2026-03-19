@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="InsurO.png" width="200px" alt="InsurO Logo">
+  <img src="InsurO.png" width="600px" alt="InsurO Logo">
 </p>
 
 <h1 align="center">InsurO</h1>
