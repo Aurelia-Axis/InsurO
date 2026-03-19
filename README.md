@@ -460,7 +460,7 @@ InsureO transforms gig worker insurance from a reactive compensation system into
 
 ## Team
 
-Built at [Hackathon Name]
+Built by Aurelia Axis
 
 ---
 
