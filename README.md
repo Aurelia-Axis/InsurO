@@ -1,389 +1,418 @@
 <p align="center">
-  <img src="InsurO.png" width="60%">
+  <img src="InsurO.png" width="200px" alt="InsurO Logo">
 </p>
 
-<h1 align="center">
-<b> InsurO - AI Powered Insurance for Delivery Partners </b>
-</h1>
+<h1 align="center">InsurO</h1>
 
 <p align="center">
-<i> <b>  "Where Disruption Meets Protection, and Hustle Never Breaks" </b> </i>
+  <strong>AI-Powered Parametric Insurance for India's Gig Delivery Workers</strong>
 </p>
 
-InsurO is an AI-driven parametric insurance platform designed to protect delivery partners from income loss caused by external disruptions such as Traffic congestion, Algorithm changes, Weather or external issues etc.
+<p align="center">
+  <em>"Where Disruption Meets Protection, and Hustle Never Breaks"</em>
+</p>
 
+<p align="center">
+  <img src="https://img.shields.io/badge/Status-Hackathon%20Project-blueviolet?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Category-FinTech%20%2F%20InsurTech-orange?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Impact-Gig%20Economy-green?style=for-the-badge" />
+</p>
 
-## Problem Statement 
+---
 
-India’s gig delivery workers depend on daily earnings from platforms like Swiggy, Zomato, and Blinkit. However, external uncontrollable disruptions such as:
-* Platform algorithm changes
-* Traffic congestion
-* Restaurant preparation delays
-* Weather disruption 
+## 🚨 The Problem
 
-can significantly reduce their working hours and cause them to lose 20–30% of their monthly income.
-Currently, gig workers have no financial protection against these uncontrollable disruptions.
+India has **50+ million gig delivery workers** on platforms like Swiggy, Zomato, and Blinkit. They earn daily, live shift to shift, and have **zero financial safety net**.
 
+Every day, things outside their control destroy their income:
 
-## Solution
-We will builda an AI-powered parametric insurance system that automatically detects disruptions, compensates workers for lost income.
-Instead of traditional claim-based insurance, InsurO uses real-time data monitoring and AI-driven triggers to automatically detect disruptions and compensate workers for lost income.
+| Disruption | Real Impact |
+|---|---|
+| 🚦 Traffic Jam | 4 deliveries/hour → 1 delivery/hour → **₹120/hour lost** |
+| 🌧️ Heavy Rain | Work stops entirely → **₹300+ lost per event** |
+| 📱 Platform Algorithm Change | Orders drop 75% overnight → **invisible income shock** |
+| 🍳 Restaurant Delay | 30-min wait = 1 missed delivery → **₹60–₹80 lost** |
 
-The platform also acts as an earnings intelligence system, helping workers identify high-demand zones and reduce income loss before it happens.
+> **There is currently no insurance product in India that protects gig workers from these uncontrollable, real-time income shocks.**
 
+---
 
-## Core System Concepts
-InsurO operates on three main pillars:
+## 💡 Our Solution — InsurO
 
-<table>
-<tr><td>1️. </td><td><code>Income Protection with Parametric Automation</code></td><td>Automatically compensates workers when disruptions reduce their delivery earnings</td></tr>
-  
-<tr><td>2️. </td><td><code>Smart Earnings Intelligence</code></td><td> Uses AI to predict risks and recommend better zones, restaurants or routes for maximizing income</td></tr>
+InsurO is an **AI-driven parametric insurance platform** that:
 
-<tr><td>3️. </td><td><code>Transparent & Fraud-Resistant Insurance</code></td><td>Ensures payouts are data-driven and verified using intelligent fraud detection mechanisms</td></tr>
-</table>
+- 🔍 **Automatically detects** income-impacting disruptions in real time
+- 📊 **Measures actual earning loss** — not just traffic or weather conditions
+- 💸 **Triggers instant payouts** without any manual claim filing
+- 🧠 **Predicts disruptions before they happen** so workers can avoid income loss proactively
 
+> InsurO doesn't ask workers to prove their loss. The system detects it, verifies it, and pays it — automatically.
 
-## Disruptions Covered 
-1. **Platform Algorithm Disruption:** Delivery platforms frequently update their order allocation algorithms, which can suddenly reduce order distribution to certain workers.
-These algorithms continuously change based on:
-- demand-supply ratio
-- delivery time optimization
-- worker ratings
-- acceptance rate
-- zone prioritization
+---
 
-Detection Logic :
-```bash
-    1. Track worker performance (orders/hour, earnings, idle time)
-    2. Compare current data with historical average
-    3. Detect sudden drop:
-       drop % = (historical_avg - current_value) / historical_avg
-    4. If drop_percentage > threshold (e.g., >30%) → "possible disruption"
-    5. Validate:
-       - No weather/traffic issues
-       - Zone demand is normal
-    6. Calculate income loss:
-       loss = expected_earnings - actual_earnings
-    7. Run fraud checks (activity logs, GPS)
-    8. If valid → Auto-trigger claim & payout
+## 🧠 The Core Innovation: Earning Efficiency Model
+
+Most systems ask: *"Is there traffic?"* — InsurO asks: **"Has the worker's earning ability actually dropped?"**
+
+```
+efficiency = current_earnings / expected_earnings
 ```
 
-Example scenario :                                              
-|       Metric         |   Value  |
-|----------------------|----------|
-| Historical Avg Orders|    12    |
-| Orders After Change  |    3     |
-| Drop percentage      |    75%   |
-| Threshold            |    70%   |
-| Status               |🚩Flagged |
+**Example (Bhubaneswar Delivery Partner):**
 
-**Note: We detect invisible income loss caused by platform changes using behavioral anomaly analysis.**
+| Metric | Normal | During Disruption |
+|---|---|---|
+| Orders/hour | 4 | 1 |
+| Earnings/hour | ₹160 | ₹40 |
+| Efficiency Score | 1.0 | **0.25** |
 
+InsurO triggers a payout only when:
+1. An external disruption is confirmed (traffic / weather / algorithm / delay)
+2. **AND** the worker's efficiency drops below `0.5`
 
-2. **Weather Disruption:** Extreme weather conditions can reduce delivery activity or make travel unsafe.
-  Examples include:
-  - Heavy rainfall
-  - Extreme heat
-  - High AQI
-  - Storm conditions
-  
-  Detection Logic :
-```bash
-   1. Fetch real-time weather data (rainfall, alerts, etc.)
-   2. Detect disruption if conditions exceed threshold (e.g., heavy rain)
-   3. Validate impact:
-      - Worker in affected area
-      - Worker was active
-      - Delivery demand reduced
-   4. Calculate income loss:
-   loss = hourly_income × hours_lost
-   5. Apply payout policy (e.g., 80% of loss)
-   6. Run fraud checks (GPS, activity, duplicates)
+This prevents fraud and ensures payouts are genuinely warranted.
+
+---
+
+## 🔐 Three Core Pillars
+
 ```
-Example scenario :
-| Metric              | Value |
-|--------------------|-------|
-| Rainfall           | 130 mm |
-| Work Hours Lost    | 3 hrs  |
-| Estimated Loss     | ₹300   |
-| Coverage           | 80%    |
-| Final Payout       | ₹240   |
-| Status             | ✅Paid |
-
-**Note: We validate real-world impact before payout, ensuring compensation only when weather truly affects earnings.**
-
-3. **Traffic Congestion:** Heavy traffic can significantly slow down deliveries, reducing the number of orders completed per hour.
-   Detection Logic :
-   ```bash
-    1. Track delivery time, speed, and orders/hour
-    2. Fetch traffic level (API/mock)
-    3. Compare with normal delivery time:
-       delay_ratio = current_time / normal_time
-    4. If delay > threshold (e.g., >1.5) AND traffic = HIGH → disruption
-    5. Validate worker is active
-    6. Calculate income loss based on reduced deliveries
-    7. Run fraud checks (GPS, route, traffic mismatch)
-    8. If valid → Auto-trigger claim & payout
-   ```
-  
-Example Scenario :
-| Metric                | Value |
-|----------------------|-------|
-| Normal Orders/hour   | 4     |
-| Normal Earnings/hour | ₹160  |
-| Current Orders/hour  | 1     |
-| Current Earnings     | ₹40   |
-| Efficiency           | 0.25  |
-| Traffic Level        | High  |
-| Loss                 | ₹120  |
-| Coverage             | 70%   |
-| Final Payout         | ₹84   |
-| Status               | 🚨 Disruption Detected |
-
-**Note: We measure earning efficiency drop instead of relying on traffic data alone for accurate disruption detection.**
-
-4. **Restaurant Preparation Delay:** Delivery workers often lose time waiting for restaurants to prepare orders.
-   Detection Logic :
-   ```bash
-    1. Track order preparation time:
-       - Expected prep time (historical avg)
-       - Current prep time
-    2. Detect delay:
-       - If current_prep_time > 2 × avg_prep_time → Delay detected
-    3. Validate rider impact:
-       - Rider is at restaurant (GPS check)
-       - Waiting time exceeds minimum threshold
-       - Order status confirms delay
-    4. Calculate income loss:
-       loss = (waiting_time / avg_delivery_time) × earning_per_delivery
-    5. Apply payout policy:
-       payout = loss × coverage_factor (e.g., 70–80%)
-    6. Run fraud checks:
-       - GPS spoofing detection
-       - Fake waiting prevention
-       - Duplicate claim check
-    7. If valid → Auto-trigger claim & payout
-   ```
-Example scenario :
-| Metric                    | Value |
-|---------------------------|-------|
-| Avg Prep Time             | 10 min |
-| Current Prep Time         | 30 min |
-| Delay Condition           | >2× (Triggered) |
-| Waiting Time              | 20 min |
-| Avg Delivery Time         | 20 min |
-| Earnings per Delivery     | ₹80   |
-| Estimated Loss            | ₹80   |
-| Coverage                  | 75%   |
-| Final Payout              | ₹60   |
-| Status                    | 🚨Delay Detected |
-
-**Note: We compensate riders only when waiting time directly reduces earning opportunities.**
-
-## AI-Powered Risk Assessment
-InsurO continuously evaluates worker activity and environmental conditions using AI models.
-
-- Smart Earnings Prediction Score
-  This AI model predicts expected earnings and disruption risk based on:
-  - historical order patterns
-  - weather conditions
-  - traffic congestion trends
-  - restaurant preparation times
-  - worker activity patterns
-
-Example Output :
-
-| Metric                     | Value        |
-|---------------------------|-------------|
-| Smart Earnings Score      | 78 / 100    |
-| Predicted Earnings Today  | ₹1200       |
-| Disruption Probability    | 35%         |
-
-## Weekly Dynamic Pricing Model
-- InsurO follows a weekly insurance pricing model, aligned with the earning cycle of gig workers.
-  Instead of monthly premiums, workers subscribe to weekly protection plans.
-
-Example pricing :
-
-| Zone Level  | Price (per week) |
-|-------------|------------------|
-| Low         | ₹20              |
-| Medium      | ₹25              |
-| High        | ₹30              |
-
-- Premiums are dynamically adjusted using AI predictions.
-## Dynamic Coverage Model
-- Coverage percentage is not fixed. It adjusts based on worker reliability and historical behavior.
-
-Example:
-
-Reliability Score	Coverage
-90–100	80%
-70–89	70%
-<70	60%
-
-Example payout:
-
-```bash
-Income Loss = ₹1000
-Coverage = 80%
-Payout = ₹800</code>
+┌────────────────────────────────────────────────────────────┐
+│  1. Income Protection        Parametric auto-payout        │
+│     with Automation          when disruption confirmed     │
+├────────────────────────────────────────────────────────────┤
+│  2. Smart Earnings           AI predicts risks, suggests   │
+│     Intelligence             better zones & routes        │
+├────────────────────────────────────────────────────────────┤
+│  3. Transparent &            Data-verified payouts with    │
+│     Fraud-Resistant          multi-layer fraud detection   │
+└────────────────────────────────────────────────────────────┘
 ```
 
-This encourages honest participation and platform sustainability.
+---
 
-## Parametric Insurance Payout
+## ⚠️ Disruptions Covered
 
-InsurO automatically calculates compensation when disruptions occur.
+### 1. 🚦 Traffic Congestion
 
-Formula
+**The Problem:** Heavy traffic reduces deliveries from 4/hour to 1/hour. Workers are active but inefficient — this is still income loss.
+
+**InsurO's Detection Logic:**
+```
+delay_ratio = current_delivery_time / normal_delivery_time
+
+IF delay_ratio > 1.5
+AND traffic_level = HIGH
+AND efficiency < 0.5
+→ DISRUPTION TRIGGERED
+```
+
+**Payout Example:**
+
+| Metric | Value |
+|---|---|
+| Expected Earnings | ₹160/hour |
+| Actual Earnings | ₹40/hour |
+| Loss | ₹120 |
+| Coverage | 70% |
+| **Final Payout** | **₹84** |
+
+**Fraud Guard:** GPS routes are cross-checked against live traffic data. If a worker is slow but traffic is normal → claim rejected.
+
+---
+
+### 2. 🌧️ Weather Disruption
+
+**The Problem:** Heavy rain, extreme heat, or storms reduce delivery activity or make roads unsafe.
+
+**InsurO's Detection Logic:**
+```
+Fetch real-time weather data
+IF rainfall > threshold (e.g., 100mm) OR weather alert active
+→ Validate: worker in affected zone + was active
+→ Calculate: loss = hourly_income × hours_lost
+→ Apply payout policy (80% coverage)
+→ Run fraud checks (GPS + activity)
+→ Auto payout
+```
+
+**Payout Example:**
+
+| Metric | Value |
+|---|---|
+| Rainfall | 130mm |
+| Work Hours Lost | 3 hrs |
+| Estimated Loss | ₹300 |
+| Coverage | 80% |
+| **Final Payout** | **₹240** |
+
+**Predictive Alert Feature:**
+```
+⚠️ Heavy rain expected at 7 PM (70% probability)
+   Predicted income drop: 25%
+   Suggested action: Work early hours / Switch to Zone B
+```
+
+---
+
+### 3. 📱 Platform Algorithm Disruption
+
+**The Problem:** Zomato, Swiggy, and Zepto update their order allocation algorithms silently. A worker's orders can drop 75% overnight with no explanation — this is **invisible income shock**.
+
+**InsurO's Detection Logic (AI-Powered):**
+```python
+# Anomaly Detection using Z-score
+z_score = (current_orders - historical_mean) / std_dev
+
+IF z_score < -2          # Statistically abnormal drop
+AND no weather event
+AND zone demand is normal
+→ ALGORITHM DISRUPTION DETECTED
+```
+
+Advanced approach uses **Isolation Forest** (scikit-learn) for behavioral anomaly detection across worker order history.
+
+**Real Example:**
+
+| Metric | Value |
+|---|---|
+| Historical Avg Orders | 12/hour |
+| Orders After Update | 3/hour |
+| Drop Percentage | **75%** |
+| Threshold | 70% |
+| Status | 🚩 Flagged |
+
+> *"Our system goes beyond visible disruptions like weather by detecting invisible income shocks caused by platform algorithm changes using real-time behavioral anomaly detection."*
+
+---
+
+### 4. 🍳 Restaurant Preparation Delay
+
+**The Problem:** Riders wait 20–30 minutes at restaurants for orders to be prepared — time they could have used for another delivery.
+
+**InsurO's Detection Logic:**
+```
+IF current_prep_time > 2 × avg_prep_time
+AND rider GPS confirms location at restaurant
+AND waiting_time > minimum threshold
+→ DELAY DETECTED
+```
+
+**Loss Formula:**
+```
+loss = (waiting_time / avg_delivery_time) × earning_per_delivery
+payout = loss × coverage_factor (70–80%)
+```
+
+**Payout Example:**
+
+| Metric | Value |
+|---|---|
+| Average Prep Time | 10 min |
+| Current Prep Time | 30 min |
+| Waiting Time | 20 min |
+| Estimated Loss | ₹80 |
+| Coverage | 75% |
+| **Final Payout** | **₹60** |
+
+---
+
+## 💰 Smart Payout Model
+
+InsurO uses **dynamic parametric payouts**, not fixed amounts.
+
+```
 Income Loss = Expected Earnings − Actual Earnings
 Insurance Payout = Coverage % × Income Loss
+```
 
-Example:
+**Weekly Premium Structure (Aligned to Gig Worker Pay Cycles):**
 
-Expected earnings = ₹160/hour
-Actual earnings = ₹40/hour
+| Zone Risk Level | Weekly Premium |
+|---|---|
+| Low Risk | ₹20/week |
+| Medium Risk | ₹25/week |
+| High Risk | ₹30/week |
 
-Income Loss = ₹120
-Coverage = 70%
+**Dynamic Coverage based on Reliability Score:**
 
-Payout = ₹84
+| Reliability Score | Coverage |
+|---|---|
+| 90–100 | 80% |
+| 70–89 | 70% |
+| Below 70 | 60% |
 
-## Intelligent Fraud Detection
+> Workers with clean claim histories earn higher coverage — this discourages fraud and rewards honesty.
 
-InsurO integrates multiple fraud prevention mechanisms to ensure payouts remain fair.
+---
 
-Algorithm Disruption Fraud Detection
+## 🤖 AI-Powered Risk Assessment
 
-The system verifies:
+InsurO continuously scores every worker:
 
-• worker activity logs
-• login time patterns
-• platform-wide order distribution
+| Output | Value |
+|---|---|
+| Smart Earnings Score | 78 / 100 |
+| Predicted Earnings Today | ₹1,200 |
+| Disruption Probability | 35% |
 
-If only one worker shows an order drop while others remain normal, the claim is flagged.
+This score is computed using:
+- Historical order patterns
+- Live weather conditions
+- Traffic congestion trends
+- Restaurant preparation history
+- Worker activity patterns
 
-## Traffic Congestion Fraud Detection
+---
 
-Traffic claims are validated using:
+## 🚀 Next-Level Features
 
-• GPS tracking
-• traffic API data
-• average delivery speeds of nearby workers
+### 1. Predictive Traffic Avoidance
+> *"Traffic likely to increase in 15 minutes in Area A — move now"*
 
-If traffic conditions are normal but the worker reports slow delivery speeds, the system flags potential fraud.
+InsurO predicts congestion **before** it hits using forecast APIs and historical patterns, allowing workers to reposition proactively.
 
-Restaurant Delay Fraud Detection
+### 2. Smart Zone Switching
+```
+📍 Current Zone: Low demand + High traffic
+💡 Suggestion: Move to Zone B → +25% earning potential
+```
 
-Restaurant delay claims are validated using:
+### 3. Loss Heatmap (Visual)
+- 🔴 Red zones = heavy income loss areas
+- 🟡 Yellow zones = moderate risk
+- 🟢 Green zones = high earning potential
 
-• restaurant order timestamps
-• arrival and pickup logs
-• data from other workers at the same restaurant
+Workers see the city's earning landscape at a glance.
 
-If multiple workers report delays at the same location, the claim is verified.
+### 4. Micro-Compensation Engine
+Instead of waiting for hourly payouts — workers receive **real-time credits every 15 minutes** during confirmed disruptions.
 
-Weather Disruption Fraud Detection
+### 5. Community Disruption Reporting
+Workers can report accidents, restaurant glitches, and platform issues. Multiple reports from the same zone strengthen AI detection accuracy.
 
-Weather claims are validated through:
+---
 
-• weather API data
-• city-wide weather alerts
-• delivery activity patterns in nearby zones
+## 🛡️ Intelligent Fraud Detection
 
-Workers cannot falsely claim weather disruptions if conditions remain normal.
+Every payout goes through a multi-layer fraud check:
 
-## Smart Earnings Intelligence Features
+| Disruption Type | Fraud Signals Monitored |
+|---|---|
+| Traffic | GPS route + speed + nearby worker speeds |
+| Weather | Weather API + city alerts + zone activity |
+| Algorithm | Cross-worker order distribution + login patterns |
+| Restaurant Delay | Restaurant timestamps + multi-worker corroboration |
 
-InsurO also helps workers increase their earnings, not just protect them.
+**Key Rule:** If only one worker shows an anomaly while all nearby workers are normal → claim is flagged and held for review.
 
-Real-Time Disruption Map
+---
 
-A city map showing:
+## 🏗️ System Architecture
 
-• heavy traffic zones
-• restaurant delay hotspots
-• low-demand areas
+```
+┌─────────────────────────────────────┐
+│        Frontend (React)             │
+│  Worker Dashboard + Map + Alerts    │
+└────────────────┬────────────────────┘
+                 │
+┌────────────────▼────────────────────┐
+│       Backend (Node.js / FastAPI)   │
+│  API Gateway + Business Logic       │
+└──────┬──────────────────┬───────────┘
+       │                  │
+┌──────▼──────┐   ┌───────▼────────┐
+│  AI Engine  │   │  External APIs │
+│  (Python)   │   │  Weather       │
+│  scikit-    │   │  Traffic       │
+│  learn,     │   │  Maps          │
+│  pandas     │   │  Mock Delivery │
+└──────┬──────┘   └───────┬────────┘
+       │                  │
+┌──────▼──────────────────▼─────────┐
+│       Database Layer               │
+│  PostgreSQL (structured data)      │
+│  MongoDB (logs + activity)         │
+└────────────────┬──────────────────┘
+                 │
+┌────────────────▼──────────────────┐
+│     Payment Gateway (Razorpay)    │
+│     Instant payout to worker      │
+└───────────────────────────────────┘
+```
 
-Workers can avoid problematic zones.
+**Real-Time Layer:** WebSockets (Socket.io) for live map updates and alerts.
 
-Route Optimization
+---
 
-Suggests better delivery routes to avoid congestion.
+## 🛠️ Tech Stack
 
-Example alert:
+| Layer | Technology |
+|---|---|
+| Frontend | React, Leaflet / Google Maps API |
+| Backend | Node.js (Express) + Python (FastAPI) |
+| AI / ML | scikit-learn (Isolation Forest, Logistic Regression, Random Forest) |
+| Data Processing | pandas, numpy |
+| Real-time | WebSockets (Socket.io) |
+| Database | PostgreSQL + MongoDB |
+| External APIs | OpenWeather API, Google Maps Traffic API, Mock Delivery API |
+| Payments | Razorpay |
+| ML Models | ARIMA / LSTM (time series), Z-score (anomaly baseline) |
 
-Heavy traffic detected in Koramangala
-Suggested route: Indiranagar → MG Road
-Surge Opportunity Alerts
+---
 
-The system detects zones with high order demand.
+## 🔄 End-to-End Workflow
 
-Example:
+```
+1. Worker logs in and starts shift
+         ↓
+2. InsurO builds/updates baseline profile
+   (avg speed, orders/hour, earnings/hour)
+         ↓
+3. Real-time monitoring begins
+   (GPS, order rate, traffic, weather)
+         ↓
+4. Disruption signal detected
+         ↓
+5. Earning efficiency score calculated
+   IF efficiency < 0.5 → PROCEED
+         ↓
+6. External cause validated
+   (weather API / traffic API / cross-worker data)
+         ↓
+7. Fraud checks run
+   (GPS, activity logs, zone demand)
+         ↓
+8. If valid → Claim auto-triggered
+         ↓
+9. Payout calculated dynamically
+         ↓
+10. Instant payment → Worker notified
+```
 
-High demand detected in Downtown
-Potential earnings increase: +30%
+---
 
-Workers are guided toward better earning opportunities.
+## 📊 Impact & Vision
 
-Predictive Risk Alerts
+InsurO is not just insurance — it is an **earnings intelligence platform** for India's gig workers.
 
-AI predicts disruptions before they occur.
+| Metric | Estimate |
+|---|---|
+| Target Users | 50M+ gig delivery workers in India |
+| Avg Monthly Income Loss (unprotected) | ₹2,000–₹4,000/worker |
+| Avg Weekly Premium | ₹20–₹30 |
+| Avg Payout per Disruption Event | ₹60–₹240 |
 
-Example:
+> **InsurO transforms gig worker insurance from a reactive compensation system into a proactive financial shield — protecting income before, during, and after every disruption.**
 
-Heavy rain expected at 7 PM
-Predicted income drop: 25%
-Recommended zone: Indiranagar
-Worker Insights Dashboard
+---
 
-Workers receive real-time insights including:
+## 👥 Team
 
-• income trends
-• disruption history
-• high-earning zones
-• weekly protected earnings
+> *Built with purpose by Aurelia Axis*
 
-This helps workers optimize their work strategy.
+---
 
-Community Disruption Reporting
+## 📄 License
 
-Workers can report disruptions such as:
-
-• accidents
-• restaurant delays
-• platform glitches
-
-Multiple reports strengthen AI detection accuracy.
-
-System Integrations
-
-GigShield integrates with multiple external data sources:
-
-• Weather APIs
-• Traffic data APIs
-• Delivery platform APIs (mocked)
-• Payment gateways for instant payouts
-
-Final Vision
-
-GigShield transforms gig worker insurance from a reactive compensation system into a proactive earnings intelligence platform.
-
-The platform:
-
-• protects workers from income loss
-• predicts disruptions using AI
-• recommends better working zones
-• ensures transparent and fraud-resistant insurance payouts
-
-GigShield ultimately empowers gig workers with financial stability and smarter earning opportunities.
-
-
-
-
-
-
-
-
+This project was built for hackathon purposes. All rights reserved by the team.
