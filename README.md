@@ -20,7 +20,7 @@
 
 ---
 
-## 🚨 The Problem
+## The Problem
 
 India has **50+ million gig delivery workers** on platforms like Swiggy, Zomato, and Blinkit. They earn daily, live shift to shift, and have **zero financial safety net**.
 
@@ -28,10 +28,10 @@ Every day, things outside their control destroy their income:
 
 | Disruption | Real Impact |
 |---|---|
-| 🚦 Traffic Jam | 4 deliveries/hour → 1 delivery/hour → **₹120/hour lost** |
-| 🌧️ Heavy Rain | Work stops entirely → **₹300+ lost per event** |
-| 📱 Platform Algorithm Change | Orders drop 75% overnight → **invisible income shock** |
-| 🍳 Restaurant Delay | 30-min wait = 1 missed delivery → **₹60–₹80 lost** |
+|  Traffic Jam | 4 deliveries/hour → 1 delivery/hour → **₹120/hour lost** |
+|  Heavy Rain | Work stops entirely → **₹300+ lost per event** |
+|  Platform Algorithm Change | Orders drop 75% overnight → **invisible income shock** |
+|  Restaurant Delay | 30-min wait = 1 missed delivery → **₹60–₹80 lost** |
 
 > **There is currently no insurance product in India that protects gig workers from these uncontrollable, real-time income shocks.**
 
@@ -41,16 +41,16 @@ Every day, things outside their control destroy their income:
 
 InsurO is an **AI-driven parametric insurance platform** that:
 
-- 🔍 **Automatically detects** income-impacting disruptions in real time
-- 📊 **Measures actual earning loss** — not just traffic or weather conditions
-- 💸 **Triggers instant payouts** without any manual claim filing
-- 🧠 **Predicts disruptions before they happen** so workers can avoid income loss proactively
+-  **Automatically detects** income-impacting disruptions in real time
+-  **Measures actual earning loss** — not just traffic or weather conditions
+-  **Triggers instant payouts** without any manual claim filing
+-  **Predicts disruptions before they happen** so workers can avoid income loss proactively
 
 > InsurO doesn't ask workers to prove their loss. The system detects it, verifies it, and pays it — automatically.
 
 ---
 
-## 🧠 The Core Innovation: Earning Efficiency Model
+## The Core Innovation: Earning Efficiency Model
 
 Most systems ask: *"Is there traffic?"* — InsurO asks: **"Has the worker's earning ability actually dropped?"**
 
@@ -74,18 +74,18 @@ This prevents fraud and ensures payouts are genuinely warranted.
 
 ---
 
-## 🔐 Three Core Pillars
+## Three Core Pillars
 
 ```
 ┌────────────────────────────────────────────────────────────┐
-│  1. Income Protection        Parametric auto-payout        │
-│     with Automation          when disruption confirmed     │
+│  1. Income Protection    |   Parametric auto-payout        │
+│     with Automation      |   when disruption confirmed     │
 ├────────────────────────────────────────────────────────────┤
-│  2. Smart Earnings           AI predicts risks, suggests   │
-│     Intelligence             better zones & routes         │
+│  2. Smart Earnings       |   AI predicts risks, suggests   │
+│     Intelligence         |   better zones & routes         │
 ├────────────────────────────────────────────────────────────┤
-│  3. Transparent &            Data-verified payouts with    │
-│     Fraud-Resistant          multi-layer fraud detection   │
+│  3. Transparent &        |   Data-verified payouts with    │
+│     Fraud-Resistant      |   multi-layer fraud detection   │
 └────────────────────────────────────────────────────────────┘
 ```
 
@@ -93,9 +93,9 @@ This prevents fraud and ensures payouts are genuinely warranted.
 
 ## ⚠️ Disruptions Covered
 
-### 1. 🚦 Traffic Congestion
+### 1.  Traffic Congestion
 
-**The Problem:** Heavy traffic reduces deliveries from 4/hour to 1/hour. Workers are active but inefficient — this is still income loss.
+**The Problem:** Heavy traffic reduces deliveries from 4/hour to 1/hour. Workers are active but inefficient, this is still income loss.
 
 **InsurO's Detection Logic:**
 ```
@@ -121,7 +121,7 @@ AND efficiency < 0.5
 
 ---
 
-### 2. 🌧️ Weather Disruption
+### 2.  Weather Disruption
 
 **The Problem:** Heavy rain, extreme heat, or storms reduce delivery activity or make roads unsafe.
 
@@ -155,9 +155,9 @@ IF rainfall > threshold (e.g., 100mm) OR weather alert active
 
 ---
 
-### 3. 📱 Platform Algorithm Disruption
+### 3.  Platform Algorithm Disruption
 
-**The Problem:** Zomato, Swiggy, and Zepto update their order allocation algorithms silently. A worker's orders can drop 75% overnight with no explanation — this is **invisible income shock**.
+**The Problem:** Zomato, Swiggy, and Zepto update their order allocation algorithms silently. A worker's orders can drop 75% overnight with no explanation, this is **invisible income shock**.
 
 **InsurO's Detection Logic (AI-Powered):**
 ```python
@@ -188,7 +188,7 @@ Advanced approach uses **Isolation Forest** (scikit-learn) for behavioral anomal
 
 ### 4. 🍳 Restaurant Preparation Delay
 
-**The Problem:** Riders wait 20–30 minutes at restaurants for orders to be prepared — time they could have used for another delivery.
+**The Problem:** Riders wait 20–30 minutes at restaurants for orders to be prepared, time they could have used for another delivery.
 
 **InsurO's Detection Logic:**
 ```
@@ -217,7 +217,7 @@ payout = loss × coverage_factor (70–80%)
 
 ---
 
-## 💰 Smart Payout Model
+##  Smart Payout Model
 
 InsurO uses **dynamic parametric payouts**, not fixed amounts.
 
@@ -242,11 +242,11 @@ Insurance Payout = Coverage % × Income Loss
 | 70–89 | 70% |
 | Below 70 | 60% |
 
-> Workers with clean claim histories earn higher coverage — this discourages fraud and rewards honesty.
+> Workers with clean claim histories earn higher coverage, this discourages fraud and rewards honesty.
 
 ---
 
-## 🤖 AI-Powered Risk Assessment
+##  AI-Powered Risk Assessment
 
 InsurO continuously scores every worker:
 
@@ -265,10 +265,10 @@ This score is computed using:
 
 ---
 
-## 🚀 Next-Level Features
+##  Next-Level Features
 
 ### 1. Predictive Traffic Avoidance
-> *"Traffic likely to increase in 15 minutes in Area A — move now"*
+> *"Traffic likely to increase in 15 minutes in Area A - move now"*
 
 InsurO predicts congestion **before** it hits using forecast APIs and historical patterns, allowing workers to reposition proactively.
 
@@ -286,7 +286,7 @@ InsurO predicts congestion **before** it hits using forecast APIs and historical
 Workers see the city's earning landscape at a glance.
 
 ### 4. Micro-Compensation Engine
-Instead of waiting for hourly payouts — workers receive **real-time credits every 15 minutes** during confirmed disruptions.
+Instead of waiting for hourly payouts workers receive **real-time credits every 15 minutes** during confirmed disruptions.
 
 ### 5. Community Disruption Reporting
 Workers can report accidents, restaurant glitches, and platform issues. Multiple reports from the same zone strengthen AI detection accuracy.
@@ -308,7 +308,7 @@ Every payout goes through a multi-layer fraud check:
 
 ---
 
-## 🏗️ System Architecture
+##  System Architecture
 
 ```
 ┌─────────────────────────────────────┐
@@ -392,9 +392,9 @@ Every payout goes through a multi-layer fraud check:
 
 ---
 
-## 📊 Impact & Vision
+##  Impact & Vision
 
-InsurO is not just insurance — it is an **earnings intelligence platform** for India's gig workers.
+InsurO is not just insurance, it is an **earnings intelligence platform** for India's gig workers.
 
 | Metric | Estimate |
 |---|---|
@@ -403,7 +403,7 @@ InsurO is not just insurance — it is an **earnings intelligence platform** for
 | Avg Weekly Premium | ₹20–₹30 |
 | Avg Payout per Disruption Event | ₹60–₹240 |
 
-> **InsurO transforms gig worker insurance from a reactive compensation system into a proactive financial shield — protecting income before, during, and after every disruption.**
+> **InsurO transforms gig worker insurance from a reactive compensation system into a proactive financial shield protecting income before, during, and after every disruption.**
 
 ---
 
