@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="InsurO.png" width="400px" alt="InsureO Logo" />
+<img src="InsureO.png" width="400px" alt="InsureO Logo" />
 
 # InsureO
 
