@@ -1,8 +1,9 @@
 import axios from "axios";
 
 // Uses env variable when deployed, falls back to localhost in dev
-const CORE_URL = import.meta.env.VITE_API_URL  || "http://localhost:8000/api";
-const RT_URL   = import.meta.env.VITE_NODE_URL || "http://localhost:3001/api";
+const isLocal  = window.location.hostname === "localhost";
+const CORE_URL = isLocal ? "http://localhost:8000/api" : "https://insureo.onrender.com/api";
+const RT_URL   = isLocal ? "http://localhost:3001/api" : "https://insureo.onrender.com/api";
 
 const core = axios.create({ baseURL: CORE_URL });
 const rt   = axios.create({ baseURL: RT_URL   });
