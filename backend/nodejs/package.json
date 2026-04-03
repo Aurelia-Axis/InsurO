@@ -1,0 +1,22 @@
+{
+  "name": "insureo-node",
+  "version": "1.0.0",
+  "description": "InsureO Node.js server — WebSocket real-time layer + Razorpay UPI webhooks",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "socket.io": "^4.7.5",
+    "cors": "^2.8.5",
+    "razorpay": "^2.9.2",
+    "axios": "^1.7.2",
+    "dotenv": "^16.4.5",
+    "mongoose": "^8.4.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.3"
+  }
+}

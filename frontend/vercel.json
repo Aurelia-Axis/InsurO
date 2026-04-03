@@ -1,0 +1,7 @@
+{
+  "rewrites": [{ "source": "/(.*)", "destination": "/" }],
+  "env": {
+    "VITE_API_URL": "https://insureo-fastapi.onrender.com",
+    "VITE_NODE_URL": "https://insureo-node.onrender.com"
+  }
+}

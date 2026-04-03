@@ -1,0 +1,87 @@
+version: "3.9"
+
+services:
+
+  # ── PostgreSQL ──────────────────────────────────────────────────────────────
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER:     postgres
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB:       insureo
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./database/postgres_schema.sql:/docker-entrypoint-initdb.d/schema.sql
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  # ── MongoDB ─────────────────────────────────────────────────────────────────
+  mongodb:
+    image: mongo:7
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+    healthcheck:
+      test: ["CMD", "mongosh", "--eval", "db.adminCommand('ping')"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  # ── FastAPI (Python) ─────────────────────────────────────────────────────────
+  fastapi:
+    build:
+      context: ./backend/fastapi
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    environment:
+      POSTGRES_URL:         postgresql+asyncpg://postgres:password@postgres:5432/insureo
+      MONGO_URL:            mongodb://mongodb:27017
+      MONGO_DB:             insureo
+      RAZORPAY_KEY_ID:      ${RAZORPAY_KEY_ID}
+      RAZORPAY_KEY_SECRET:  ${RAZORPAY_KEY_SECRET}
+    depends_on:
+      postgres:
+        condition: service_healthy
+      mongodb:
+        condition: service_healthy
+    volumes:
+      - ./backend/fastapi:/app
+
+  # ── Node.js ──────────────────────────────────────────────────────────────────
+  nodejs:
+    build:
+      context: ./backend/nodejs
+      dockerfile: Dockerfile
+    ports:
+      - "3001:3001"
+    environment:
+      PORT:                    3001
+      FASTAPI_URL:             http://fastapi:8000
+      MONGO_URL:               mongodb://mongodb:27017/insureo
+      RAZORPAY_KEY_ID:         ${RAZORPAY_KEY_ID}
+      RAZORPAY_KEY_SECRET:     ${RAZORPAY_KEY_SECRET}
+      RAZORPAY_WEBHOOK_SECRET: ${RAZORPAY_WEBHOOK_SECRET}
+    depends_on:
+      - fastapi
+
+  # ── React Frontend ────────────────────────────────────────────────────────────
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - "5173:80"
+    depends_on:
+      - fastapi
+      - nodejs
+
+volumes:
+  postgres_data:
+  mongo_data:
