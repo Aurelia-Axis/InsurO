@@ -2,11 +2,8 @@ import axios from "axios";
 
 // Uses env variable when deployed, falls back to localhost in dev
 const isLocal  = window.location.hostname === "localhost";
-const RENDER   = "https://insureo.onrender.com";
-const PROXY    = `https://corsproxy.io/?${encodeURIComponent(RENDER)}`;
-const BASE     = isLocal ? "http://localhost:8000" : PROXY;
-const CORE_URL = `${BASE}/api/`;
-const RT_URL   = isLocal ? "http://localhost:3001/api/" : `${BASE}/api/`;
+const CORE_URL = isLocal ? "http://localhost:8000/api/" : "https://insureo.onrender.com/api/";
+const RT_URL   = isLocal ? "http://localhost:3001/api/" : "https://insureo.onrender.com/api/";
 
 const core = axios.create({ baseURL: CORE_URL, timeout: 30000 });
 const rt   = axios.create({ baseURL: RT_URL,   timeout: 30000 });
