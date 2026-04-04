@@ -44,6 +44,7 @@ app = FastAPI(
     description="Parametric insurance for gig delivery workers",
     version="1.0.0",
     lifespan=lifespan,
+    redirect_slashes=False,
 )
 
 app.add_middleware(
