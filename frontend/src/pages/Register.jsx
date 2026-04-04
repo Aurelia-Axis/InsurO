@@ -36,12 +36,17 @@ export default function Register() {
     setError(null);
     try {
       const worker = await registerWorker(form);
-      localStorage.setItem("insureo_worker_id",   worker.id);
-      localStorage.setItem("insureo_worker_name",  worker.name);
+      localStorage.setItem("insureo_worker_id",       worker.id);
+      localStorage.setItem("insureo_worker_name",     worker.name);
       localStorage.setItem("insureo_worker_platform", worker.platform);
       navigate("/");
     } catch (e) {
-      setError(e?.response?.data?.detail || "Registration failed. Please try again.");
+      const msg = e?.response?.data?.detail;
+      if (e?.code === "ECONNABORTED" || !e?.response) {
+        setError("Server is waking up — please wait 30 seconds and try again.");
+      } else {
+        setError(msg || "Registration failed. Please try again.");
+      }
     } finally {
       setLoading(false);
     }

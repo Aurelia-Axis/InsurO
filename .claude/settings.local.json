@@ -2,7 +2,11 @@
   "permissions": {
     "allow": [
       "WebFetch(domain:raw.githubusercontent.com)",
-      "Bash(curl -s \"https://raw.githubusercontent.com/Aurelia-Axis/InsureO/main/backend/fastapi/requirements.txt\")"
+      "Bash(curl -s \"https://raw.githubusercontent.com/Aurelia-Axis/InsureO/main/backend/fastapi/requirements.txt\")",
+      "Bash(curl -s https://insureo.onrender.com/health)",
+      "Bash(curl -s -w \"\\\\n\\\\nHTTP_STATUS_CODE: %{http_code}\" -X POST https://insureo.onrender.com/api/workers -H \"Content-Type: application/json\" -d '{\"\"name\"\": \"\"Test User\"\", \"\"phone\"\": \"\"9876543210\"\", \"\"upi_id\"\": \"\"test@upi\"\", \"\"platform\"\": \"\"swiggy\"\", \"\"city\"\": \"\"Bhubaneswar\"\", \"\"risk_zone\"\": \"\"medium\"\"}')",
+      "Bash(curl -s -L -w \"\\\\n\\\\nHTTP_STATUS_CODE: %{http_code}\" -X POST https://insureo.onrender.com/api/workers -H \"Content-Type: application/json\" -d '{\"\"name\"\": \"\"Test User\"\", \"\"phone\"\": \"\"9876543210\"\", \"\"upi_id\"\": \"\"test@upi\"\", \"\"platform\"\": \"\"swiggy\"\", \"\"city\"\": \"\"Bhubaneswar\"\", \"\"risk_zone\"\": \"\"medium\"\"}')",
+      "Bash(curl -s -v -L -X POST https://insureo.onrender.com/api/workers -H \"Content-Type: application/json\" -d '{\"\"name\"\": \"\"Test User\"\", \"\"phone\"\": \"\"9876543210\"\", \"\"upi_id\"\": \"\"test@upi\"\", \"\"platform\"\": \"\"swiggy\"\", \"\"city\"\": \"\"Bhubaneswar\"\", \"\"risk_zone\"\": \"\"medium\"\"}')"
     ]
   }
 }

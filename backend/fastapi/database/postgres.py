@@ -8,7 +8,7 @@ from sqlalchemy.orm import DeclarativeBase
 import os
 
 # SQLite — works with zero installation, file stored locally
-DATABASE_URL = os.getenv("POSTGRES_URL", "sqlite+aiosqlite:///./insureo.db")
+DATABASE_URL = os.getenv("POSTGRES_URL", "sqlite+aiosqlite:////tmp/insureo.db")
 
 engine = create_async_engine(DATABASE_URL, echo=False, connect_args={"check_same_thread": False} if "sqlite" in DATABASE_URL else {})
 SessionLocal = async_sessionmaker(engine, class_=AsyncSession, expire_on_commit=False)

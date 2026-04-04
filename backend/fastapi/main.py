@@ -32,13 +32,10 @@ async def seed_db():
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    try:
-        from database.postgres import init_db
-        await init_db()
-        await seed_db()
-        print("[INFO] Database ready")
-    except Exception as e:
-        print(f"[WARNING] DB not available: {e} — running without persistence")
+    from database.postgres import init_db
+    await init_db()
+    await seed_db()
+    print("[INFO] Database ready")
     yield
 
 
